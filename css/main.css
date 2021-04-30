@@ -2,53 +2,73 @@
 body {
   color: #2b2b2b;
   font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
 }
 
-/*****GRID*****/
-.full-width {
-  margin: 0 auto;
-  overflow: auto;
-  width: 1200px;
+.content-wrapper {
+    width: 90%;
 }
 
-.half-width {
-  float: left;
-  width: 600px;
-}
-
-.third-width {
-  float: left;
-  width: 400px;
+ol, ul {
+    list-style: none;
 }
 
 /*****HEADER*****/
-.home-page {
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.menu {
+    background-color: #ebebeb;
+    width: 100%;
+}
+
+.hero {
   background: url("../img/full-background.png");
-  background-position: center;
+  background-position: right;
   background-size: cover;
-  height: 800px;
+  height: 700px;
 }
 
 header h1 {
   color: #bbc085;
   font-family: "Lora", serif;
-  font-size: 30px;
-  padding: 65px 0 65px 25px;
+  font-size: 5.5em;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.name {
+    width: 100%;
+    border-bottom:  1px solid #9b9b9b;
+}
+
+.navigation {
+    border-bottom:  1px solid #9b9b9b;
+    width: 100%;
 }
 
 nav {
-  float: right;
-  padding: 75px 25px;
+  width: 100%;
 }
 
-nav ul li {
-  display: inline-block;
+nav ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
 }
 
 nav ul li a {
   color: #828282;
-  font-size: 18px;
-  padding-left: 50px;
+  font-size: 3.125em;
+  padding: 15px 0;
   text-decoration: none;
   text-transform: capitalize;
 }
@@ -57,10 +77,11 @@ header h2 {
   clear: both;
   color: #9b9b9b;
   font-family:"Lora", serif;
-  font-size: 72px;
-  line-height: 80px;
-  padding: 20px 0 20px 25px;
-  width: 1000px;
+  font-size: 3.9em;
+  line-height: 1.1;
+  padding: 100px 0 20px 55px;
+  margin-top: 0;
+  width: 90%;
 }
 
 header h2 span {
@@ -68,134 +89,323 @@ header h2 span {
 }
 
 /*****ABOUT SECTION*****/
-#about .full-width {
-  padding: 80px 0;
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 #about h2 {
   font-family: "Lora", serif;
-  font-size: 36px;
+  font-size: 3em;
   padding-left:50px;
 }
 
 #about p {
   color: #7f7f7f;
-  font-size: 21px;
-  line-height: 40px;
-  padding-left: 50px;
-  padding-right: 50px;
+  font-size: 2em;
+  line-height: 1.5;
+  padding: 25px 50px 50px 50px;
+}
+
+#about .content-wrapper {
+    margin-bottom: 50px;
+}
+
+.about-title, .about-text {
+    width: 100%;
 }
 
 /*****WORK SECTION*****/
 
-#work {
+#work .content-wrapper {
   background: #f9ceb7;
   text-align: center;
-  }
+  padding-bottom: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
 
-#work .full-width {
-  padding: 115px 0;
+.html,
+.css,
+.designs {
+    width: 100%;
 }
 
 #work img {
-  padding-bottom: 30px;
+  padding: 75px 0 30px 0;
+  height: 125px;
 }
 
 #work h3 {
-  font-size:24px;
+  font-size:2.5em;
   line-height:32px;
   margin: 0 auto;
-  width:190px;
+  /* width:190px; */
 }
 
 #work p {
   font-family:"Lora", serif;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 2em;
+  line-height: 1.5;
   padding: 0 50px;
 }
 
 /*****CONTACT SECTION*****/
 
+footer .content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+footer i {
+  font-size: 1.8em;
+}
+
 #contact {
   background-color: #ebebeb;
 }
 
-#contact .full-width{
-  padding: 110px 0;
+.contact-photo {
+  width: 100%;
+  text-align: center;
 }
 
-#contact img#contact-img {
+#contact-img {
   border: 12px solid #ffffff;
-  margin-left: 25px;
+  margin-top: 50px;
 }
 
-#contact h2, #contact #email-header, #contact #socialmedia-header, #contact ul {
-  padding-left: 115px;
-}
-
-#contact #envelope {
-  padding: 0 10px 0 115px;
-}
-
-#contact h2 {
+.contact-title{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 25px;
   font-family:"Lora", serif;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 2em;
 }
 
-#contact #email-header {
-  font-size: 32px;
+.email-text,
+.social-text {
+  width: 100%;
+  text-align: center;
+  margin: 80px 0;
+}
+
+
+#email-header {
+  margin-top: 0;
+}
+
+#email-header,
+#socialmedia-header {
+  font-size: 2.75em;
   font-weight: normal;
   line-height: 44px;
-  margin: -30px 0 5px 0;
 }
 
-#contact #socialmedia-header {
-  font-weight: bold;
-  font-size: 29px;
-  line-height: 44px;
-  margin: 40px 0 0 0;
+.fa-envelope {
+  margin-bottom: 12px;
+  font-size: 1em;
+}
+
+.email-address {
+  font-size: 2.5em;
 }
 
 #contact a {
   color: #c49075;
-  font-size: 28px;
   font-weight:bold;
   text-decoration: none;
+  margin-bottom: 25px;
 }
 
 #contact ul {
   list-style: none;
+  padding: 0;
 }
 
 #contact ul li {
   display: inline-block;
 }
 
-#contact ul img {
-  padding-right: 48px;
+.social-text i {
+  padding: 20px 63px;
+  font-size: 3.75em;
 }
 
-/*****ADDITIONAL PAGES*****/
-.under-construction {
-  text-align: center;
-  font-size: 24px;
-  color: gray;
-  width: 600px;
-  margin: 100px 300px;
-  clear: both;
-  font-family: "Lora", serif;
+/* ======================================================================================================================================= */
+
+@media only screen and (min-width: 1200px) {
+  /* Desktop Styles */
+
+  header {
+    background: url("../img/full-background.png");
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 75px 125px;
+    background-color: transparent;
+    height: 55px;
+  }
+
+  header h1 {
+    font-size: 1.875em;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 25px;
+  }
+
+  .navigation, 
+  .name {
+    width: 45%;
+    border-bottom: none;
+  }
+
+  nav ul {
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+  }
+
+  nav ul li a {
+    font-size: 1.125em;
+    padding: 0 25px;
+  }
+
+  header h2 {
+    font-size: 4.5em;
+    width: 80%;
+    padding: 23px 0 0 145px;
+  }
+
+
+  .hero {
+    background: none;
+  }
+
+ /*****ABOUT SECTION*****/
+
+ .about-text {
+   width: 45%;
+ }
+
+ #about .content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: row wrap;
+ }
+
+ #about h2 {
+   font-size: 2.25em;
+   margin: 110px 0 0 48px;
+ }
+
+ #about p {
+   font-size: 1.3125em;
+   line-height: 2;
+   padding: 25px 43px 50px 0;
+   margin: 21px 0 21px 61px;
+ }
+
+/*****WORK SECTION*****/
+
+#work .content-wrapper {
+  padding: 135px 0;
 }
 
-.main-nav {
-  float: right;
-  padding-right: 50px;
+.html,
+.css,
+.designs {
+    width: 28%;
 }
 
-.my-work-container, .about-me-container, .testimonials-container {
-  background: gainsboro;
-  width: 100%;
-  height: 1000px;
+#work h3 {
+  font-size: 1.5em;
+  margin: 0 95px;
+}
 
+#work img {
+  height: 85px;
+  padding: 0 0 30px 0;
+}
+
+#work p {
+  font-size: 1.125em;
+  line-height: 30px;
+}
+
+/*****CONTACT SECTION*****/
+
+#contact-img {
+  margin: 110px 0;
+}
+
+.contact-photo {
+  width: 50%;
+}
+
+footer .content-wrapper {
+  align-items: flex-start;
+}
+
+.all-contact-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40%;
+  flex-flow: row wrap;
+  margin-top: 140px;
+}
+
+.contact-title {
+  font-size: 1.5em;
+}
+
+.contact-title,
+.contact-title h2,
+.email-text,
+#email-header,
+.social-text {
+  margin: 0;
+  text-align: left;
+}
+
+#email-header {
+  font-size: 2em;
+}
+
+#contact a {
+  font-size: 1.75em;
+}
+
+.fa-envelope {
+  font-size: 1em;
+}
+
+#socialmedia-header {
+  font-size: 1.8125em;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.social-text i {
+  padding: 0 48px 0 0;
+  font-size: 1em;
+  font-weight: bold;
+}
 }
