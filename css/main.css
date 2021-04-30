@@ -27,30 +27,19 @@ header{
     width: 100%;
 }
 
-.hero {
-  background: url("../img/full-background.png");
-  background-position: right;
-  background-size: cover;
-  height: 700px;
-}
-
 header h1 {
   color: #bbc085;
   font-family: "Lora", serif;
   font-size: 5.5em;
-  padding: 20px 0;
   text-align: center;
   margin-bottom: 45px;
+  padding: 20px 0;
 }
 
-.name {
-    width: 100%;
-    border-bottom:  1px solid #9b9b9b;
-}
-
+.name,
 .navigation {
-    border-bottom:  1px solid #9b9b9b;
-    width: 100%;
+  width: 100%;
+  border-bottom:  1px solid #9b9b9b;
 }
 
 nav {
@@ -58,23 +47,29 @@ nav {
 }
 
 nav ul {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
 }
 
 nav ul li a {
-  color: #828282;
-  font-size: 3.125em;
-  padding: 15px 0;
-  text-decoration: none;
-  text-transform: capitalize;
+color: #828282;
+font-size: 3.125em;
+padding: 15px 0;
+text-decoration: none;
+text-transform: capitalize;
+}
+
+.hero {
+  background: url("../img/full-background.png");
+  background-position: right;
+  background-size: cover;
+  height: 700px;
 }
 
 header h2 {
-  clear: both;
   color: #9b9b9b;
   font-family:"Lora", serif;
   font-size: 3.9em;
@@ -96,6 +91,14 @@ header h2 span {
     flex-flow: row wrap;
 }
 
+#about .content-wrapper {
+  margin-bottom: 50px;
+}
+
+.about-title, .about-text {
+  width: 100%;
+}
+
 #about h2 {
   font-family: "Lora", serif;
   font-size: 3em;
@@ -107,14 +110,6 @@ header h2 span {
   font-size: 2em;
   line-height: 1.5;
   padding: 25px 50px 50px 50px;
-}
-
-#about .content-wrapper {
-    margin-bottom: 50px;
-}
-
-.about-title, .about-text {
-    width: 100%;
 }
 
 /*****WORK SECTION*****/
@@ -145,7 +140,6 @@ header h2 span {
   font-size:2.5em;
   line-height:32px;
   margin: 0 auto;
-  /* width:190px; */
 }
 
 #work p {
@@ -165,10 +159,6 @@ footer .content-wrapper {
   width: 100%;
 }
 
-footer i {
-  font-size: 1.8em;
-}
-
 #contact {
   background-color: #ebebeb;
 }
@@ -184,20 +174,19 @@ footer i {
 }
 
 .contact-title{
+  font-family:"Lora", serif;
+  font-size: 2em;
   text-align: center;
   width: 100%;
   margin-bottom: 25px;
-  font-family:"Lora", serif;
-  font-size: 2em;
 }
 
 .email-text,
 .social-text {
-  width: 100%;
   text-align: center;
   margin: 80px 0;
+  width: 100%;
 }
-
 
 #email-header {
   margin-top: 0;
@@ -236,8 +225,8 @@ footer i {
 }
 
 .social-text i {
-  padding: 20px 63px;
   font-size: 3.75em;
+  padding: 20px 63px;
 }
 
 /* ======================================================================================================================================= */
@@ -253,12 +242,18 @@ footer i {
   }
 
   .menu {
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 75px 125px;
-    background-color: transparent;
     height: 55px;
+    padding: 75px 125px;
+  }
+
+  .navigation, 
+  .name {
+    width: 45%;
+    border-bottom: none;
   }
 
   header h1 {
@@ -266,12 +261,6 @@ footer i {
     text-align: left;
     margin: 0;
     padding: 0 0 0 25px;
-  }
-
-  .navigation, 
-  .name {
-    width: 45%;
-    border-bottom: none;
   }
 
   nav ul {
@@ -292,120 +281,119 @@ footer i {
     padding: 23px 0 0 145px;
   }
 
-
   .hero {
     background: none;
   }
 
  /*****ABOUT SECTION*****/
 
- .about-text {
-   width: 45%;
- }
+  #about .content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: row wrap;
+  }
 
- #about .content-wrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-flow: row wrap;
- }
+  #about h2 {
+    font-size: 2.25em;
+    margin: 110px 0 0 48px;
+  }
 
- #about h2 {
-   font-size: 2.25em;
-   margin: 110px 0 0 48px;
- }
+  .about-text {
+    width: 45%;
+  }
 
- #about p {
-   font-size: 1.3125em;
-   line-height: 2;
-   padding: 25px 43px 50px 0;
-   margin: 21px 0 21px 61px;
- }
+  #about p {
+    font-size: 1.3125em;
+    line-height: 2;
+    padding: 25px 43px 50px 0;
+    margin: 21px 0 21px 61px;
+  }
 
-/*****WORK SECTION*****/
+  /*****WORK SECTION*****/
 
-#work .content-wrapper {
-  padding: 135px 0;
-}
+  #work .content-wrapper {
+    padding: 135px 0;
+  }
 
-.html,
-.css,
-.designs {
-    width: 28%;
-}
+  .html,
+  .css,
+  .designs {
+      width: 28%;
+  }
 
-#work h3 {
-  font-size: 1.5em;
-  margin: 0 95px;
-}
+  #work img {
+    height: 85px;
+    padding: 0 0 30px 0;
+  }
 
-#work img {
-  height: 85px;
-  padding: 0 0 30px 0;
-}
+  #work h3 {
+    font-size: 1.5em;
+    margin: 0 95px;
+  }
 
-#work p {
-  font-size: 1.125em;
-  line-height: 30px;
-}
+  #work p {
+    font-size: 1.125em;
+    line-height: 30px;
+  }
 
-/*****CONTACT SECTION*****/
+  /*****CONTACT SECTION*****/
 
-#contact-img {
-  margin: 110px 0;
-}
+  footer .content-wrapper {
+    align-items: flex-start;
+  }
 
-.contact-photo {
-  width: 50%;
-}
+  #contact-img {
+    margin: 110px 0;
+  }
 
-footer .content-wrapper {
-  align-items: flex-start;
-}
+  .contact-photo {
+    width: 50%;
+  }
 
-.all-contact-text {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 40%;
-  flex-flow: row wrap;
-  margin-top: 140px;
-}
+  .all-contact-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 40%;
+    flex-flow: row wrap;
+    margin-top: 140px;
+  }
 
-.contact-title {
-  font-size: 1.5em;
-}
+  .contact-title,
+  .contact-title h2,
+  .email-text,
+  #email-header,
+  .social-text {
+    margin: 0;
+    text-align: left;
+  }
 
-.contact-title,
-.contact-title h2,
-.email-text,
-#email-header,
-.social-text {
-  margin: 0;
-  text-align: left;
-}
+  .contact-title {
+    font-size: 1.5em;
+  }
 
-#email-header {
-  font-size: 2em;
-}
+  #email-header {
+    font-size: 2em;
+  }
 
-#contact a {
-  font-size: 1.75em;
-}
+  #contact a {
+    font-size: 1.75em;
+  }
 
-.fa-envelope {
-  font-size: 1em;
-}
+  .fa-envelope {
+    font-size: 1em;
+  }
 
-#socialmedia-header {
-  font-size: 1.8125em;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
+  #socialmedia-header {
+    font-size: 1.8125em;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
 
-.social-text i {
-  padding: 0 48px 0 0;
-  font-size: 1em;
-  font-weight: bold;
-}
+  .social-text i {
+    padding: 0 48px 0 0;
+    font-size: 1em;
+    font-weight: bold;
+  }
 }
